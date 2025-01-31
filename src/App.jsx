@@ -1,6 +1,9 @@
 import { useState } from "react";
 import ExpenceList from "./components/ExpenceList";
 import ExpenceFilter from "./components/ExpenceFilter";
+import ExpenceForm from "./components/ExpenceForm";
+
+export const categories = ["Utilities", "Groceries", "Entertainment"];
 
 function App() {
   const [category, setCategory] = useState("");
@@ -18,6 +21,7 @@ function App() {
 
   return (
     <>
+      <ExpenceForm />
       <ExpenceFilter onSelectCategory={(category) => setCategory(category)} />
       <ExpenceList
         expences={visibleExpenses}
