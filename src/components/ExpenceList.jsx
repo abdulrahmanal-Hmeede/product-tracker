@@ -1,17 +1,17 @@
 import React from "react";
 
 const ExpenceList = ({ expences, onDelete }) => {
-  if (expences.length == 0) return null;
+  //   if (expences.length == 0) return null;
   return (
     <>
-      <table className="table table-hover">
+      <table className="table table-bordered">
         <thead>
-          <th>
-            <td>Description</td>
-            <td>Amount</td>
-            <td>Category</td>
-            <td></td>
-          </th>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>
           {expences.map((expence) => (
